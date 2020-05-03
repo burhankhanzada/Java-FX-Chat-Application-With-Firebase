@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.burhankhanzada.java.project.controllers.LoginController">
+    <children>
+        <HBox alignment="CENTER">
+            <children>
+                <Label maxWidth="1.7976931348623157E308" styleClass="heading" text="Chat Application - OOP Project" HBox.hgrow="ALWAYS" />
+                <HBox alignment="CENTER_RIGHT" spacing="10.0" HBox.hgrow="NEVER">
+                    <children>
+                        <Button onAction="#openSetting" styleClass="icon_button">
+                            <graphic>
+                                <SVGPath content="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" style="-fx-fill: white;" />
+                            </graphic>
+                        </Button>
+                        <Button onAction="#maximize" styleClass="icon_button">
+                            <graphic>
+                                <SVGPath content="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm0 14H5V8h14v10z" style="-fx-fill: white;" />
+                            </graphic>
+                        </Button>
+                        <Button onAction="#close" styleClass="icon_button">
+                            <graphic>
+                                <SVGPath content="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" style="-fx-fill: white;" />
+                            </graphic>
+                        </Button>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                </HBox>
+            </children>
+        </HBox>
+        <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets bottom="10.0" top="10.0" />
+            </VBox.margin>
+            <children>
+                <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                    <children>
+                        <ImageView fx:id="image_logo" fitHeight="100" fitWidth="500" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/iu-logo.png" />
+                            </image>
+                            <viewport>
+                                <Rectangle2D />
+                            </viewport>
+                        </ImageView>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+                <StackPane VBox.vgrow="NEVER">
+                    <children>
+                        <VBox fx:id="vbox_login" alignment="CENTER" spacing="10">
+                            <children>
+                                <HBox style="-fx-alignment: center;" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Label styleClass="heading" text="Username" />
+                                        <TextField fx:id="textField" onKeyPressed="#sendMethod" HBox.hgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox style="-fx-alignment: center;" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Label styleClass="heading" text="Password" />
+                                        <PasswordField fx:id="passwordField" onKeyPressed="#sendMethod" HBox.hgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets left="15.0" />
+                                            </HBox.margin>
+                                        </PasswordField>
+                                    </children>
+                                </HBox>
+                                <Button alignment="CENTER" onAction="#login" text="Chat" />
+                            </children>
+                        </VBox>
+                        <ProgressIndicator fx:id="progressIndicator" visible="false" StackPane.alignment="CENTER" />
+                    </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+                </StackPane>
+            </children>
+        </VBox>
+        <Label styleClass="heading" text="Group Members" VBox.vgrow="ALWAYS" />
+        <ListView fx:id="listView_groupMembers" prefHeight="120.0">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </ListView>
+    </children>
+    <styleClass>
+        <String fx:value="root" />
+    </styleClass>
+</VBox>

@@ -1,0 +1,155 @@
+.root {
+    -fx-padding: 10;
+    -fx-border-radius: 25;
+    -fx-background: black;
+    -fx-border-width: 2.5px;
+    -fx-border-color: #FF5C5C;
+    -fx-background-radius: 30;
+}
+
+.heading {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FF5C5C;
+}
+
+.label {
+    -fx-font-size: 16px;
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 50;
+    -fx-background-color: #FF5C5C;
+}
+
+.icon_button {
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+}
+
+#group_chat_button {
+    -fx-padding: 5px 5px 5px 5px;
+}
+
+#group_chat_button:hover {
+    -fx-background-radius: 50;
+    -fx-background-color: #FF5C5C;
+}
+
+#group_chat_button:hover .label {
+    -fx-text-fill: white;
+}
+
+.text-field  {
+    -fx-padding: 5px 15px 5px 15px;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-border-radius: 20;
+    -fx-border-width: 2.5px;
+    -fx-border-insets: 5px;
+    -fx-border-color: #FF5C5C;
+    -fx-background-radius: 20;
+    -fx-background-insets: 5px;
+    -fx-background-color: #212121;
+    -fx-text-box-border: transparent;
+}
+
+.text-field:focused {
+    -fx-focus-color: transparent;
+}
+
+.password-field {
+    -fx-text-fill: #FF5C5C;
+}
+
+.progress-indicator {
+    -fx-progress-color: #FF5C5C;
+}
+
+.radio-button {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FF5C5C;
+}
+
+.radio-button .radio{
+    -fx-border-width: 2px;
+    -fx-border-radius: 25px;
+    -fx-border-color: #FF5C5C;
+    -fx-background-color: transparent;
+    -fx-background-image: null;
+}
+
+.radio-button .dot{
+    -fx-mark-color: #FF5C5C;
+    -fx-mark-highlight-color: #FF5C5C;
+}
+
+.list-view, .scroll-pane {
+    -fx-padding: 5px;
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+}
+
+.list-view .scroll-bar:vertical {
+    -fx-scale-x: 0;
+}
+
+.list-view .scroll-bar:vertical .increment-arrow,
+.list-view .scroll-bar:vertical .decrement-arrow,
+.list-view .scroll-bar:vertical .increment-button,
+.list-view .scroll-bar:vertical .decrement-button {
+    -fx-padding:0;
+}
+
+.list-view .list-cell {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+}
+
+#listView_groupMembers {
+    -fx-background-radius: 20;
+    -fx-background-color: #FF5C5C;
+}
+
+#listView_users .list-cell .label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FF5C5C;
+}
+
+#listView_users .list-cell:filled:hover {
+    -fx-background-radius: 50;
+    -fx-background-color: #FF5C5C;
+}
+
+#listView_users .list-cell:filled:hover .label {
+    -fx-text-fill: white;
+}
+
+#listView_chat {
+    -fx-background-color: #212121;
+}
+
+.icon-color{
+    -fx-fill: #FF5C5C;
+}
+
+.chat-bubble-left {
+    -fx-padding: 10;
+    -fx-text-fill: #FF5C5C;
+    -fx-background-color: white;
+    -fx-background-radius: 0 20 20 20;
+}
+
+.chat-bubble-right {
+    -fx-padding: 10;
+    -fx-text-fill: white;
+    -fx-background-color: #FF5C5C;
+    -fx-background-radius: 20 0 20 20;
+}
